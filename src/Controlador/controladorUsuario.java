@@ -88,37 +88,12 @@ public class controladorUsuario implements ActionListener {
             
 
 // Insertar el usuario en la base de datos
-            usu.insertarUsuario(); // Asumiendo que el método se llama 'insertarUsuario'
-
+            usu.insertarUsuario(); 
 // Limpiar los componentes después de la inserción
             usu.limpiarCampos(nuevo.getjPanelUsuario().getComponents());
 
 
-            /*
-            //selecionamos la fecha y cambiamos el formato de fecha que entiende sql//
-            java.util.Date fec = nuevo.getjDateChooser1().getDate();
-            Long fe = fec.getTime();
-
-            java.sql.Date fecha = new Date(fe);
-
-            //contraseña
-            char[] contra = nuevo.getjTexClave().getPassaword();
-            String contraseña = String.valueOf(contra);
-
-            usu.setDoc(Integer.parseInt(nuevo.getjTexDocumento().getText()));
-            usu.setNom(nuevo.getTxtNombre(nuevo.getText()));
-            usu.setTele(getTxtTelefono(nuevo.getText()));
-            usu.setCorreo(getTxtCorreo(nuevo.getText()));
-            usu.setDir();(getTxtDireccion(nuevo.getText()));
-            usu.setSexo(getTxtSexo(nuevo.getSexo()));
-            usu.setCargo(nuevo.getText());
-            usu.setLog(valorCargo);
-            usu.setFec(fecha(Date.getTime()));
-
-            usu.insertarusuario();
-            usu.Limpiar(nuevo.getJpusuario());
-            getCopmponents());       
-             */
+          
         }
 
     }
