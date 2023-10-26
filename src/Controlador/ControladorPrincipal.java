@@ -53,5 +53,37 @@ public class ControladorPrincipal implements ActionListener {
             concli.Inicio();
             prin.setVisible(false);
         }
+    }   
+} 
+    
+/*@Override
+   public void stateChanged(ChangeEvent e){
+   int seleccion = prin.getJtprincipal().getSelectedIndex()==0){}
+   if (seleccion ==0){
+   gestion pestanas();
+   }
+   if seleccion==1){
+   ModeloUsuario modUsu = ModeloUsuario();
+   ModeloUsuario.mostrarTablaUsuario(prin.getTbUsuario(), valor "");
+
+   prin.getTxtBuscar().addMouseListener)(new MouseAdappter)(){
+    @Override
+    public void mouseClicked(MouseEvent e){
+    prin.getTxtBuscar(). SetTex("");
+    prin.getTxtBuscar(). SetForeground(Color.BLACK);
     }
-}
+});
+   prin.getTxtBuscar().addMouseListener)(new MouseAdappter)(){
+    @Override
+     public void insertUpdate(DocumentEvent e){
+    modUsu.MostrarTablaUsuario(prin.getTbUsuario(), prin.getTxtBuscar().getText());
+   }
+    @Override
+     public void removeUpdate(DocumentEvent e){
+    modUsu.MostrarTablaUsuario(prin.getTbUsuario(), prin.getTxtBuscar().getText());
+   }
+    @Override
+     public void changedUpdate(DocumentEvent e){
+    modUsu.MostrarTablaUsuario(prin.getTbUsuario(), prin.getTxtBuscar().getText());
+   }
+});*/

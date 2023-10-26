@@ -61,6 +61,8 @@ public class Principal extends javax.swing.JFrame {
         btnuevo = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jTexBuscar = new javax.swing.JTextField();
+        jButtoBuscar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPFactura = new javax.swing.JPanel();
@@ -117,28 +119,43 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jTexBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTexBuscarActionPerformed(evt);
+            }
+        });
+
+        jButtoBuscar.setText("jButton1");
+
         javax.swing.GroupLayout jPUSUARIOLayout = new javax.swing.GroupLayout(jPUSUARIO);
         jPUSUARIO.setLayout(jPUSUARIOLayout);
         jPUSUARIOLayout.setHorizontalGroup(
             jPUSUARIOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPUSUARIOLayout.createSequentialGroup()
-                .addGroup(jPUSUARIOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPUSUARIOLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnuevo))
-                    .addGroup(jPUSUARIOLayout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(66, 66, 66)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(80, Short.MAX_VALUE))
+            .addGroup(jPUSUARIOLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnuevo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTexBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56))
         );
         jPUSUARIOLayout.setVerticalGroup(
             jPUSUARIOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPUSUARIOLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(btnuevo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPUSUARIOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPUSUARIOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnuevo)
+                        .addComponent(jTexBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtoBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         jTaCliente.addTab("USUARIO", jPUSUARIO);
@@ -313,6 +330,10 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBnClienteActionPerformed
 
+    private void jTexBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTexBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTexBuscarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -322,6 +343,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnProveedor;
     private javax.swing.JButton btnuevo;
     private javax.swing.JButton jBnCliente;
+    private javax.swing.JButton jButtoBuscar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPCliente;
     private javax.swing.JPanel jPFactura;
@@ -337,7 +359,12 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTexBuscar;
     // End of variables declaration//GEN-END:variables
+
+    public Object getJtprincipal() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
 
 }

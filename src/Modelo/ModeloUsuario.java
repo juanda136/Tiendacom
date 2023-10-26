@@ -20,7 +20,23 @@ public class ModeloUsuario {
     Conexion conect = new Conexion();
     Connection cn = conect.iniciarConexion();
 
-    private int doc, sex, cargo;
+    private int doc, sex, Tip, Cargo;
+
+    public int getTip() {
+        return Tip;
+    }
+
+    public int getCargo() {
+        return Cargo;
+    }
+
+    public void setCargo(int Cargo) {
+        this.Cargo = Cargo;
+    }
+
+    public void setTip(int Tip) {
+        this.Tip = Tip;
+    }
     private String nom, dir, tele, cor, log, clave;
     private Date fec;
 
@@ -80,14 +96,6 @@ public class ModeloUsuario {
         this.fec = fec;
     }
 
-    public int getcargo() {
-        return cargo;
-    }
-
-    public void setCargo(int cargo) {
-        this.cargo = cargo;
-    }
-
     public String getCor() {
         return cor;
     }
@@ -129,7 +137,7 @@ public class ModeloUsuario {
     }
 
     public void insertarUsuario() {
-        String sql = "CALL ins_usuario(?,?,?,?,?,?,?,?)";
+        String sql = "CALL ins_usuario(?,?,?,?,?,?,?,?,?,?)";
 
         try {
             PreparedStatement ps = cn.prepareStatement(sql);
@@ -140,7 +148,7 @@ public class ModeloUsuario {
             ps.setString(5, getDir());
             ps.setDate(6, getFec());
             ps.setInt(7, getSex());
-            ps.setInt(8, getcargo());
+            ps.setInt(8, getCargo());
             ps.setString(9, getLog());
             ps.setString(10, getClave());
             ps.executeUpdate();  // Ejecutar la inserción
@@ -154,7 +162,7 @@ public class ModeloUsuario {
         for (Object limpiar : panel) {
             if (limpiar instanceof JTextField) {
                 ((JTextField) limpiar).setText("Campo de texto limpiado.");
-       
+
             }
             if (limpiar instanceof JComboBox) { // Corregido el nombre de la clase
                 ((JComboBox) limpiar).setSelectedItem("seleccione...");
@@ -163,9 +171,50 @@ public class ModeloUsuario {
             if (limpiar instanceof JDateChooser) {
                 ((JDateChooser) limpiar).setDate(null);
                 System.out.println("Fecha del JDateChooser restablecida a nula.");
-                
+
             }
         }
+    }
+
+    public void buscarUsuario(int valor) {
+
+        Conexion cone = new Conexion();
+        Connection cn = cone.iniciarConexion();
+        String sql = "call bus_Usuario (" + valor + ")";
+
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next()) {
+
+                setDoc(rs.getInt(1));
+                setTip(rs.getInt(2));
+                setNom(rs.getString(3));
+                setTele(rs.getString(4));
+                setCor(rs.getString(5));
+                setDir(rs.getString(6));
+                setFec(rs.getDate(7));
+                setSex(rs.getInt(8));
+                setCargo(rs.getInt(9));
+                setLog(rs.getString(10));
+                setClave(rs.getString(11));
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public String obtenerSeleccion(Map<String, Integer> dato, int valor) {
+        for (Map.Entry<String, Integer> seleccion : dato.entrySet()) {
+            if (seleccion.getValue() == valor) {
+                return seleccion.getKey();
+            }
+        }
+        return null;
     }
 
 }

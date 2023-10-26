@@ -99,3 +99,40 @@ public class controladorUsuario implements ActionListener {
     }
 
 }
+/*public void actualizar usuario(int doc){
+              usu.buscarUsuario (doc);
+              nuevo.getTxtDocumento().setEnabled(false);
+              nuevo.getTxtLogin().setEnabled(false);
+              nuevo.getTxtTipo().setEnabled(false);
+              nuevo.getDocumento().setText(String,ValueOf(doc));
+              nuevo.getCorreo().setText(Usu.getCor);
+              nuevo.getNombre().setText(Usu.getNombre());
+              nuevo.getDireccion().setText(Usu.getDir());
+              nuevo.getTelefono().setText(Usu.getTel());
+              nuevo.getLogin().setText(Usu.getLo());
+              nuevo.getClave().setText(Usu.getCl());
+              nuevo.getFecha().setText(Usu.getFec());
+              //llenar sexo
+              map<String,Integer> dato = usu.llenarcombo("sexo");
+              for(String sexo : dato.Keyset()){
+              nuevo.getJcvsexo(). addItem(sexo);
+              //obtener el valor guardado en la base de dato.
+              String ValorSexo= usu.obtenerSeleccio(dato,usu.getSex());
+              nuevo.getJcbsexo().setselection(valorSexo);
+             }
+              map<String,Integer> dato = usu.llenarcombo("rol");
+              for(String rol : dato.Keyset()){
+              nuevo.getJcvCargo(). addItem(Rol);
+              }
+              String ValoRol= usu.obtenerSeleccion(dato,usu.getRol());
+              nuevo.getJcbCargo().setselectionItem(valorRol);
+              
+              map<String,Integer> dato = usu.llenarcombo("Tipodoc");
+              for(String Tipo : datof.Keyset()){
+              nuevo.getJcvtipo(). addItem(tipodoc);
+              
+              String ValorTipo= usu.obtenerSeleccion(dato,usu.getTipo());
+              nuevo.getJcbTipo().setselectionItem(valorTipo);
+
+            Border borde= BorderFactory.createTitleedBorder(null,"actualizarUsuario"),
+             javax.swing.border.TitledBorder.LE.*/
