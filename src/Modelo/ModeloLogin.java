@@ -37,23 +37,24 @@ public class ModeloLogin {
     public boolean validar(String usuario, String pass) {
         boolean result = false;
 
-        String sql = "call login (?,?)";
+        String sql = "call login(?,?)";
         try {
             PreparedStatement ps = (PreparedStatement) cn.prepareStatement(sql);
             ps.setString(1, usuario);
             ps.setString(2, pass);
           
             ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
+            if (rs.next()) {
                 result = true;
-                
+            }
+            if(result==true){
                 cn.close();
-            conect.cerrarConexion();
+                conect.cerrarConexion();
             }
             
             
         }catch (SQLException e) {
-        }
+        e.printStackTrace();}
         
         
         return result;

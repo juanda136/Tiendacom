@@ -22,36 +22,60 @@ public class Nuevocliente extends javax.swing.JFrame {
         initComponents();
     }
 
-    public JTextField getJtxCedula() {
-        return jtxCedula;
+    public JTextField getjTexCedula() {
+        return jTexCedula;
     }
 
-    public void setJtxCedula(JTextField jtxCedula) {
-        this.jtxCedula = jtxCedula;
+    public void setjTexCedula(JTextField jTexCedula) {
+        this.jTexCedula = jTexCedula;
+    }
+
+    public JComboBox<String> getCbxTipoDocumento() {
+        return CbxTipoDocumento;
+    }
+
+    public void setCbxTipoDocumento(JComboBox<String> CbxTipoDocumento) {
+        this.CbxTipoDocumento = CbxTipoDocumento;
+    }
+
+    public JTextField getjTexNombre() {
+        return jTexNombre;
+    }
+
+    public void setjTexNombre(JTextField jTexNombre) {
+        this.jTexNombre = jTexNombre;
     }
 
     public JComboBox<String> getCbxsexo() {
-        return cbxsexo;
+        return CbxSexo;
     }
 
     public void setCbxsexo(JComboBox<String> cbxsexo) {
-        this.cbxsexo = cbxsexo;
+        this.CbxSexo = cbxsexo;
     }
 
-    public JButton getjButtonCancelar() {
-        return jButtonCancelar;
+    public JButton getBtnCancelar() {
+        return BtnCancelar;
     }
 
-    public void setjButtonCancelar(JButton jButtonCancelar) {
-        this.jButtonCancelar = jButtonCancelar;
+    public JComboBox<String> getCbxSexo() {
+        return CbxSexo;
     }
 
-    public JButton getjButtonGuardar() {
-        return jButtonGuardar;
+    public void setCbxSexo(JComboBox<String> CbxSexo) {
+        this.CbxSexo = CbxSexo;
     }
 
-    public void setjButtonGuardar(JButton jButtonGuardar) {
-        this.jButtonGuardar = jButtonGuardar;
+    public void setBtnCancelar(JButton BtnCancelar) {
+        this.BtnCancelar = BtnCancelar;
+    }
+
+    public JButton getBtnGuardarCliente() {
+        return BtnGuardarCliente;
+    }
+
+    public void setBtnGuardarCliente(JButton BtnGuardarCliente) {
+        this.BtnGuardarCliente = BtnGuardarCliente;
     }
 
     public JTextField getjTexCorreo() {
@@ -78,20 +102,12 @@ public class Nuevocliente extends javax.swing.JFrame {
         this.jTexTelefono = jTexTelefono;
     }
 
-    public JDateChooser getjDateChooser1() {
-        return jDateChooser1;
+    public JDateChooser getJdchfNacimiento() {
+        return jdchfNacimiento;
     }
 
-    public void setjDateChooser1(JDateChooser jDateChooser1) {
-        this.jDateChooser1 = jDateChooser1;
-    }
-
-    public JTextField getjTextNombre() {
-        return jTextNombre;
-    }
-
-    public void setjTextNombre(JTextField jTextNombre) {
-        this.jTextNombre = jTextNombre;
+    public void setJdchfNacimiento(JDateChooser jdchfNacimiento) {
+        this.jdchfNacimiento = jdchfNacimiento;
     }
 
     /**
@@ -103,161 +119,157 @@ public class Nuevocliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cbxsexo = new javax.swing.JComboBox<>();
+        jTexDireccion = new javax.swing.JTextField();
+        CbxSexo = new javax.swing.JComboBox<>();
         jLabelTelefono = new javax.swing.JLabel();
         jTexTelefono = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextNombre = new javax.swing.JTextField();
+        jTexNombre = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jButtonGuardar = new javax.swing.JButton();
+        BtnGuardarCliente = new javax.swing.JButton();
         jTexCorreo = new javax.swing.JTextField();
-        jButtonCancelar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        BtnCancelar = new javax.swing.JButton();
+        jLabelDireccion = new javax.swing.JLabel();
         jLbNuevoCliente = new javax.swing.JLabel();
-        jTexDireccion = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jLabelFnacimiento = new javax.swing.JLabel();
+        jLabelSexo = new javax.swing.JLabel();
+        jdchfNacimiento = new com.toedter.calendar.JDateChooser();
         jLbCedula = new javax.swing.JLabel();
-        jtxCedula = new javax.swing.JTextField();
+        jTexCedula = new javax.swing.JTextField();
+        jTexdIRECCUIO = new javax.swing.JTextField();
+        jLabelTipoDocumento = new javax.swing.JLabel();
+        CbxTipoDocumento = new javax.swing.JComboBox<>();
+        jLabelfondoCliente = new javax.swing.JLabel();
+
+        jTexDireccion.setBackground(new java.awt.Color(0, 0, 0));
+        jTexDireccion.setForeground(new java.awt.Color(255, 255, 255));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelTelefono.setText("Telefono");
+        CbxSexo.setBackground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(CbxSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 206, -1));
 
-        jLabel2.setText("Nombre");
+        jLabelTelefono.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelTelefono.setForeground(new java.awt.Color(255, 255, 0));
+        jLabelTelefono.setText("Telefono :");
+        getContentPane().add(jLabelTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
 
-        jLabel4.setText("Correo");
+        jTexTelefono.setBackground(new java.awt.Color(0, 0, 0));
+        jTexTelefono.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jTexTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 155, -1));
 
-        jButtonGuardar.setText("Guardar");
-        jButtonGuardar.addActionListener(new java.awt.event.ActionListener() {
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel2.setText("Nombre :");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
+
+        jTexNombre.setBackground(new java.awt.Color(0, 0, 0));
+        jTexNombre.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jTexNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, 440, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel4.setText("Correo :");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
+
+        BtnGuardarCliente.setBackground(new java.awt.Color(0, 0, 0));
+        BtnGuardarCliente.setForeground(new java.awt.Color(255, 255, 0));
+        BtnGuardarCliente.setText("Guardar");
+        BtnGuardarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGuardarActionPerformed(evt);
+                BtnGuardarClienteActionPerformed(evt);
             }
         });
+        getContentPane().add(BtnGuardarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, -1, -1));
 
-        jButtonCancelar.setText("Cancelar");
+        jTexCorreo.setBackground(new java.awt.Color(0, 0, 0));
+        jTexCorreo.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jTexCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 440, -1));
 
-        jLabel5.setText("Direccion");
+        BtnCancelar.setBackground(new java.awt.Color(0, 0, 0));
+        BtnCancelar.setForeground(new java.awt.Color(255, 255, 0));
+        BtnCancelar.setText("Cancelar");
+        getContentPane().add(BtnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, -1, -1));
 
+        jLabelDireccion.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelDireccion.setForeground(new java.awt.Color(255, 255, 0));
+        jLabelDireccion.setText("Direccion :");
+        getContentPane().add(jLabelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, 28));
+
+        jLbNuevoCliente.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLbNuevoCliente.setForeground(new java.awt.Color(255, 255, 0));
         jLbNuevoCliente.setText("NUEVO CLIENTE");
+        getContentPane().add(jLbNuevoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
 
-        jLabel7.setText("Fecha de Nacimiento");
+        jLabelFnacimiento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelFnacimiento.setForeground(new java.awt.Color(255, 255, 0));
+        jLabelFnacimiento.setText("<html>Fecha de Nacimiento :<html>");
+        getContentPane().add(jLabelFnacimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 120, 40));
 
-        jLabel6.setText("sexo");
+        jLabelSexo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelSexo.setForeground(new java.awt.Color(255, 255, 0));
+        jLabelSexo.setText("sexo :");
+        getContentPane().add(jLabelSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, -1, -1));
 
-        jDateChooser1.setDateFormatString("yyyy-MM-dd");
+        jdchfNacimiento.setBackground(new java.awt.Color(0, 51, 204));
+        jdchfNacimiento.setDateFormatString("yyyy-MM-dd");
+        getContentPane().add(jdchfNacimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 220, -1));
 
-        jLbCedula.setText("Cedula");
+        jLbCedula.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLbCedula.setForeground(new java.awt.Color(255, 255, 0));
+        jLbCedula.setText("Cedula :");
+        getContentPane().add(jLbCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(31, 31, 31)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel6)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLbCedula)
-                                        .addComponent(jLabel2)))
-                                .addGap(30, 30, 30)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(cbxsexo, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabelTelefono))
-                                            .addComponent(jTexDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTexTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(jTextNombre)
-                                        .addComponent(jLbNuevoCliente)
-                                        .addComponent(jTexCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jtxCedula, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(165, 165, 165))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(jButtonGuardar)
-                        .addGap(60, 60, 60)
-                        .addComponent(jButtonCancelar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLbNuevoCliente)
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLbCedula)
-                    .addComponent(jtxCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTexCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTexDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(cbxsexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelTelefono)
-                    .addComponent(jTexTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonGuardar)
-                    .addComponent(jButtonCancelar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jTexCedula.setBackground(new java.awt.Color(0, 0, 0));
+        jTexCedula.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jTexCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 440, -1));
+        getContentPane().add(jTexdIRECCUIO, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 440, -1));
+
+        jLabelTipoDocumento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelTipoDocumento.setForeground(new java.awt.Color(255, 255, 0));
+        jLabelTipoDocumento.setText("Tipo documento :");
+        getContentPane().add(jLabelTipoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+
+        CbxTipoDocumento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione:", "Cedula", "Tarjeta Identidad", "Registro" }));
+        getContentPane().add(CbxTipoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 200, -1));
+
+        jLabelfondoCliente.setBackground(new java.awt.Color(0, 0, 0));
+        jLabelfondoCliente.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelfondoCliente.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelfondoCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/ImagenesFondos/28117-violeta.jpg"))); // NOI18N
+        jLabelfondoCliente.setText("jLabel1");
+        getContentPane().add(jLabelfondoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 660, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
+    private void BtnGuardarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarClienteActionPerformed
 
-    }//GEN-LAST:event_jButtonGuardarActionPerformed
+    }//GEN-LAST:event_BtnGuardarClienteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cbxsexo;
-    private javax.swing.JButton jButtonCancelar;
-    private javax.swing.JButton jButtonGuardar;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JButton BtnCancelar;
+    private javax.swing.JButton BtnGuardarCliente;
+    private javax.swing.JComboBox<String> CbxSexo;
+    private javax.swing.JComboBox<String> CbxTipoDocumento;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabelDireccion;
+    private javax.swing.JLabel jLabelFnacimiento;
+    private javax.swing.JLabel jLabelSexo;
     private javax.swing.JLabel jLabelTelefono;
+    private javax.swing.JLabel jLabelTipoDocumento;
+    private javax.swing.JLabel jLabelfondoCliente;
     private javax.swing.JLabel jLbCedula;
     private javax.swing.JLabel jLbNuevoCliente;
+    private javax.swing.JTextField jTexCedula;
     private javax.swing.JTextField jTexCorreo;
     private javax.swing.JTextField jTexDireccion;
+    private javax.swing.JTextField jTexNombre;
     private javax.swing.JTextField jTexTelefono;
-    private javax.swing.JTextField jTextNombre;
-    private javax.swing.JTextField jtxCedula;
+    private javax.swing.JTextField jTexdIRECCUIO;
+    private com.toedter.calendar.JDateChooser jdchfNacimiento;
     // End of variables declaration//GEN-END:variables
 }

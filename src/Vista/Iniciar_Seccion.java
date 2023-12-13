@@ -1,10 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
+import java.awt.Container;
+import java.awt.Graphics;
+import java.awt.Image;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -14,20 +14,43 @@ import javax.swing.JTextField;
  */
 public class Iniciar_Seccion extends javax.swing.JFrame {
 
-    public JButton getjButtoIIniciar() {
-        return jButtoIIniciar;
+
+
+     public  Iniciar_Seccion () {
+       
+     }
+ 
+
+    public JButton getBtnIniciarSeccion() {
+        return BtnIniciarSeccion;
     }
 
-    public void setjButtoIIniciar(JButton jButtoIIniciar) {
-        this.jButtoIIniciar = jButtoIIniciar;
+    public JButton getBtnMostrarClave() {
+        return BtnMostrarClave;
     }
-    
+
+    public void setBtnMostrarClave(JButton BtnMostrarClave) {
+        this.BtnMostrarClave = BtnMostrarClave;
+    }
+
+    public void setBtnIniciarSeccion(JButton BtnIniciarSeccion) {
+        this.BtnIniciarSeccion = BtnIniciarSeccion;
+    }
+     
     public JPasswordField getjPasswordContrasena() {
-        return jPasswordContrasena;
+        return jPasswordFieldContrasena;
     }
 
     public void setjPasswordContrasena(JPasswordField jPasswordContrasena) {
-        this.jPasswordContrasena = jPasswordContrasena;
+        this.jPasswordFieldContrasena = jPasswordContrasena;
+    }
+
+    public JButton getjButtonMostrarClave() {
+        return BtnMostrarClave;
+    }
+
+    public void setjButtonMostrarClave(JButton jButtonMostrarClave) {
+        this.BtnMostrarClave = jButtonMostrarClave;
     }
 
     public JTextField getjTexUsuario() {
@@ -38,12 +61,24 @@ public class Iniciar_Seccion extends javax.swing.JFrame {
         this.jTexUsuario = jTexUsuario;
     }
 
+    public JPanel getjPanelFondo() {
+        return jPanelFondo;
+    }
+
+    public void setjPanelFondo(JPanel jPanelFondo) {
+        this.jPanelFondo = jPanelFondo;
+    }
+
+  
+    
+
     /**
      * Creates new form Iniciar_Seccion
      */
-    public Iniciar_Seccion() {
+  public void Iniciar_Seccion() {
         initComponents();
     }
+    
     
 
     /**
@@ -55,86 +90,61 @@ public class Iniciar_Seccion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabelIniciarseccion = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabelIcono = new javax.swing.JLabel();
+        jLabelUsuario = new javax.swing.JLabel();
         jTexUsuario = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jPasswordContrasena = new javax.swing.JPasswordField();
-        jButtoIIniciar = new javax.swing.JButton();
+        jLabelContrasena = new javax.swing.JLabel();
+        jPasswordFieldContrasena = new javax.swing.JPasswordField();
+        BtnIniciarSeccion = new javax.swing.JButton();
+        BtnMostrarClave = new javax.swing.JButton();
+        jPanelFondo = new javax.swing.JPanel();
+        jLabelFondo = new javax.swing.JLabel();
+
+        jButton1.setText("jButton1");
+
+        jPasswordField1.setText("jPasswordField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setIconImage(getIconImage());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelIniciarseccion.setText("Iniciar Seccion");
+        jLabelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/ImagenesIconos/usuario (3).png"))); // NOI18N
+        getContentPane().add(jLabelIcono, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, 170, 140));
 
-        jLabel2.setText("Usuario");
+        jLabelUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelUsuario.setForeground(new java.awt.Color(255, 255, 0));
+        jLabelUsuario.setText("Usuario :");
+        getContentPane().add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
-        jLabel3.setText("Contraseña");
+        jTexUsuario.setBackground(new java.awt.Color(0, 0, 0));
+        jTexUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jTexUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 250, -1));
 
-        jButtoIIniciar.setText("INICIAR");
+        jLabelContrasena.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelContrasena.setForeground(new java.awt.Color(255, 255, 0));
+        jLabelContrasena.setText("Contraseña :");
+        getContentPane().add(jLabelContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabelIniciarseccion)
-                .addGap(163, 163, 163))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTexUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPasswordContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addComponent(jButtoIIniciar)))
-                .addContainerGap(123, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addComponent(jLabelIniciarseccion)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel2))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTexUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addComponent(jButtoIIniciar)
-                .addGap(68, 68, 68))
-        );
+        jPasswordFieldContrasena.setBackground(new java.awt.Color(0, 0, 0));
+        jPasswordFieldContrasena.setForeground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPasswordFieldContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 330, 250, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        BtnIniciarSeccion.setBackground(new java.awt.Color(0, 0, 0));
+        BtnIniciarSeccion.setForeground(new java.awt.Color(255, 255, 51));
+        BtnIniciarSeccion.setText("Iniciar Seccion");
+        getContentPane().add(BtnIniciarSeccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, -1, -1));
+
+        BtnMostrarClave.setBackground(new java.awt.Color(255, 255, 0));
+        BtnMostrarClave.setForeground(new java.awt.Color(204, 204, 204));
+        BtnMostrarClave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/ImagenesIconos/candado (2).png"))); // NOI18N
+        getContentPane().add(BtnMostrarClave, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 30, 40));
+        getContentPane().add(jPanelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 340, 40));
+
+        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Vista/ImagenesFondos/28078-violeta.jpg"))); // NOI18N
+        jLabelFondo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 540, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -145,12 +155,17 @@ public class Iniciar_Seccion extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtoIIniciar;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabelIniciarseccion;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordContrasena;
+    private javax.swing.JButton BtnIniciarSeccion;
+    private javax.swing.JButton BtnMostrarClave;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabelContrasena;
+    private javax.swing.JLabel jLabelFondo;
+    private javax.swing.JLabel jLabelIcono;
+    private javax.swing.JLabel jLabelUsuario;
+    private javax.swing.JPanel jPanelFondo;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordFieldContrasena;
     private javax.swing.JTextField jTexUsuario;
     // End of variables declaration//GEN-END:variables
+
 }
